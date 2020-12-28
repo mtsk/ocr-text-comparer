@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcrTextComparer", "OcrTextComparer\OcrTextComparer.csproj", "{CA56F220-088F-4644-B86C-1C80893E7E49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA56F220-088F-4644-B86C-1C80893E7E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA56F220-088F-4644-B86C-1C80893E7E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA56F220-088F-4644-B86C-1C80893E7E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA56F220-088F-4644-B86C-1C80893E7E49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E9C2A8E-65E1-4481-B9D8-F27B436AFF2F}
+	EndGlobalSection
+EndGlobal
