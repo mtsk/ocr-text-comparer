@@ -1,0 +1,2 @@
+data downloaded from:
+https://github.com/tesseract-ocr/tessdata
