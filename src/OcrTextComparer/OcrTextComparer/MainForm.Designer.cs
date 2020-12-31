@@ -35,7 +35,6 @@
             this.lblScan2 = new System.Windows.Forms.Label();
             this.chkSynchronizeMovement = new System.Windows.Forms.CheckBox();
             this.lblScan1 = new System.Windows.Forms.Label();
-            this.compareControl = new Ismaroik.ImageCompare.WinForms.ImageCompareControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -44,6 +43,7 @@
             this.btnLoadScan2 = new System.Windows.Forms.Button();
             this.btnLoadScan1 = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.compareControl = new Ismaroik.ImageCompare.WinForms.ImageCompareControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,16 +73,16 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(698, 35);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(789, 35);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // lblScan2
             // 
             this.lblScan2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblScan2.Location = new System.Drawing.Point(427, 0);
+            this.lblScan2.Location = new System.Drawing.Point(472, 0);
             this.lblScan2.Name = "lblScan2";
             this.lblScan2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.lblScan2.Size = new System.Drawing.Size(268, 32);
+            this.lblScan2.Size = new System.Drawing.Size(314, 32);
             this.lblScan2.TabIndex = 1;
             this.lblScan2.Text = "lblScan2";
             this.lblScan2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,7 +93,7 @@
             this.chkSynchronizeMovement.Appearance = System.Windows.Forms.Appearance.Button;
             this.chkSynchronizeMovement.ImageIndex = 1;
             this.chkSynchronizeMovement.ImageList = this.imlSyncStatesImages;
-            this.chkSynchronizeMovement.Location = new System.Drawing.Point(277, 3);
+            this.chkSynchronizeMovement.Location = new System.Drawing.Point(322, 3);
             this.chkSynchronizeMovement.Name = "chkSynchronizeMovement";
             this.chkSynchronizeMovement.Size = new System.Drawing.Size(144, 25);
             this.chkSynchronizeMovement.TabIndex = 28;
@@ -108,22 +108,10 @@
             this.lblScan1.Location = new System.Drawing.Point(3, 0);
             this.lblScan1.Name = "lblScan1";
             this.lblScan1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.lblScan1.Size = new System.Drawing.Size(268, 32);
+            this.lblScan1.Size = new System.Drawing.Size(313, 32);
             this.lblScan1.TabIndex = 0;
             this.lblScan1.Text = "lblScan1";
             this.lblScan1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // compareControl
-            // 
-            this.compareControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.compareControl.ImagesTextSplitterDistance = 57;
-            this.compareControl.Location = new System.Drawing.Point(150, 35);
-            this.compareControl.Name = "compareControl";
-            this.compareControl.Size = new System.Drawing.Size(698, 365);
-            this.compareControl.SynchronizeImagePanZoom = false;
-            this.compareControl.TabIndex = 30;
-            this.compareControl.TextDeleteColor = System.Drawing.Color.Red;
-            this.compareControl.TextInsertColor = System.Drawing.Color.Green;
             // 
             // panel1
             // 
@@ -133,7 +121,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.panel1.Size = new System.Drawing.Size(150, 400);
+            this.panel1.Size = new System.Drawing.Size(150, 545);
             this.panel1.TabIndex = 31;
             // 
             // groupBox1
@@ -147,7 +135,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(142, 400);
+            this.groupBox1.Size = new System.Drawing.Size(142, 545);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -217,11 +205,23 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
+            // compareControl
+            // 
+            this.compareControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.compareControl.ImagesTextSplitterDistance = 250;
+            this.compareControl.Location = new System.Drawing.Point(150, 35);
+            this.compareControl.Name = "compareControl";
+            this.compareControl.Size = new System.Drawing.Size(789, 510);
+            this.compareControl.SynchronizeImagePanZoom = false;
+            this.compareControl.TabIndex = 32;
+            this.compareControl.TextDeleteColor = System.Drawing.Color.Red;
+            this.compareControl.TextInsertColor = System.Drawing.Color.Green;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 400);
+            this.ClientSize = new System.Drawing.Size(939, 545);
             this.Controls.Add(this.compareControl);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -243,7 +243,6 @@
         private System.Windows.Forms.Label lblScan2;
         private System.Windows.Forms.CheckBox chkSynchronizeMovement;
         private System.Windows.Forms.Label lblScan1;
-        private Ismaroik.ImageCompare.WinForms.ImageCompareControl compareControl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -252,6 +251,7 @@
         private System.Windows.Forms.Button btnLoadScan2;
         private System.Windows.Forms.Button btnLoadScan1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private Ismaroik.ImageCompare.WinForms.ImageCompareControl compareControl;
     }
 }
 

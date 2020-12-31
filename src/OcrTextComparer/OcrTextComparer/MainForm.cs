@@ -72,7 +72,10 @@ namespace OcrTextComparer
             string langCode = ((TesLanguages.Language)cmbLanguage.SelectedItem).LangCode;
             string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            compareControl.LoadImages(mScan1Path, mScan2Path, Path.Combine(assemblyDir, "Data"), true);
+            string workingFolder = Path.Combine(assemblyDir, "TempData");
+            System.IO.Directory.CreateDirectory(workingFolder);
+
+            compareControl.LoadImages(mScan1Path, mScan2Path, workingFolder, true);
 
             string tesdataPath = Path.Combine(assemblyDir, "..\\..\\..\\");
             compareControl.PerformOcr_Tes(tesdataPath, langCode);
