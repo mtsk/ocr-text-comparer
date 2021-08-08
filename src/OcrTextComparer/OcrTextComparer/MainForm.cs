@@ -13,6 +13,7 @@ namespace OcrTextComparer
 {
     public partial class MainForm : Form
     {
+        private const string sImageFilesFilter = "Image Files(*.bmp, *.jpg , *.tif, *.png) | *.bmp;*.jpg;*.tif;*.png";
         private string mScan1Path = "";
         private string mScan2Path = "";
 
@@ -27,6 +28,8 @@ namespace OcrTextComparer
 
             cmbLanguage.Items.AddRange(TesLanguages.Languages);
             cmbLanguage.SelectedItem = TesLanguages.Languages.First(l => l.LangCode == "eng");
+
+            chkSynchronizeMovement.Checked = true;
         }
 
         private void chkSynchronizeMovement_CheckedChanged(object sender, EventArgs e)
@@ -37,13 +40,14 @@ namespace OcrTextComparer
 
         private void btnLoadScan1_Click(object sender, EventArgs e)
         {
-            openFileDialog.Filter = "Image Files(*.bmp, *.jpg , *.tif) | *.bmp;*.jpg;*.tif";
+            openFileDialog.Filter = sImageFilesFilter;
             openFileDialog.FilterIndex = 1;
             openFileDialog.FileName = "";
             openFileDialog.ShowDialog();
 
-            if (openFileDialog.FileName != "")  // Ak sa nieco vrati z opendialogu
+            if (openFileDialog.FileName != "")
             {
+                lblScan1.Text = Path.GetFileName(openFileDialog.FileName);
                 mScan1Path = openFileDialog.FileName;
                 btnLoadScan1.BackColor = Color.FromArgb(128, 0, 255, 0);
             }
@@ -53,13 +57,14 @@ namespace OcrTextComparer
 
         private void btnLoadScan2_Click(object sender, EventArgs e)
         {
-            openFileDialog.Filter = "Image Files(*.bmp, *.jpg , *.tif) | *.bmp;*.jpg;*.tif";
+            openFileDialog.Filter = sImageFilesFilter;
             openFileDialog.FilterIndex = 1;
             openFileDialog.FileName = "";
             openFileDialog.ShowDialog();
 
-            if (openFileDialog.FileName != "")  // Ak sa nieco vrati z opendialogu
+            if (openFileDialog.FileName != "")
             {
+                lblScan2.Text = Path.GetFileName(openFileDialog.FileName);
                 mScan2Path = openFileDialog.FileName;
                 btnLoadScan2.BackColor = Color.FromArgb(128, 0, 255, 0);
             }
@@ -69,16 +74,25 @@ namespace OcrTextComparer
 
         private void btnCompare_Click(object sender, EventArgs e)
         {
-            string langCode = ((TesLanguages.Language)cmbLanguage.SelectedItem).LangCode;
-            string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
 
-            string workingFolder = Path.Combine(assemblyDir, "TempData");
-            System.IO.Directory.CreateDirectory(workingFolder);
+                string langCode = ((TesLanguages.Language)cmbLanguage.SelectedItem).LangCode;
+                string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            compareControl.LoadImages(mScan1Path, mScan2Path, workingFolder, true);
+                string workingFolder = Path.Combine(assemblyDir, "TempData");
+                System.IO.Directory.CreateDirectory(workingFolder);
 
-            string tesdataPath = Path.Combine(assemblyDir, "..\\..\\..\\");
-            compareControl.PerformOcr_Tes(tesdataPath, langCode);
+                compareControl.LoadImages(mScan1Path, mScan2Path, workingFolder, true);
+
+                string tesdataPath = Path.Combine(assemblyDir, "..\\..\\..\\");
+                compareControl.PerformOcr_Tes(tesdataPath, langCode);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
         }
 
         private void cmbLanguage_SelectedValueChanged(object sender, EventArgs e)

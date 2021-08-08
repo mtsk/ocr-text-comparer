@@ -61,7 +61,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.lblScan2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.chkSynchronizeMovement, 1, 0);
@@ -72,33 +72,33 @@
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(789, 35);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
             // lblScan2
             // 
             this.lblScan2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblScan2.Location = new System.Drawing.Point(472, 0);
+            this.lblScan2.Location = new System.Drawing.Point(480, 0);
             this.lblScan2.Name = "lblScan2";
             this.lblScan2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.lblScan2.Size = new System.Drawing.Size(314, 32);
+            this.lblScan2.Size = new System.Drawing.Size(306, 32);
             this.lblScan2.TabIndex = 1;
             this.lblScan2.Text = "lblScan2";
             this.lblScan2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chkSynchronizeMovement
             // 
-            this.chkSynchronizeMovement.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkSynchronizeMovement.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkSynchronizeMovement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkSynchronizeMovement.ImageIndex = 1;
             this.chkSynchronizeMovement.ImageList = this.imlSyncStatesImages;
-            this.chkSynchronizeMovement.Location = new System.Drawing.Point(322, 3);
+            this.chkSynchronizeMovement.Location = new System.Drawing.Point(315, 3);
             this.chkSynchronizeMovement.Name = "chkSynchronizeMovement";
-            this.chkSynchronizeMovement.Size = new System.Drawing.Size(144, 25);
+            this.chkSynchronizeMovement.Size = new System.Drawing.Size(159, 26);
             this.chkSynchronizeMovement.TabIndex = 28;
-            this.chkSynchronizeMovement.Text = "Synchronized zoom";
+            this.chkSynchronizeMovement.Text = "Synchronized pan & zoom";
             this.chkSynchronizeMovement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.chkSynchronizeMovement.UseMnemonic = false;
             this.chkSynchronizeMovement.UseVisualStyleBackColor = true;
             this.chkSynchronizeMovement.CheckedChanged += new System.EventHandler(this.chkSynchronizeMovement_CheckedChanged);
             // 
@@ -108,7 +108,7 @@
             this.lblScan1.Location = new System.Drawing.Point(3, 0);
             this.lblScan1.Name = "lblScan1";
             this.lblScan1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.lblScan1.Size = new System.Drawing.Size(313, 32);
+            this.lblScan1.Size = new System.Drawing.Size(306, 32);
             this.lblScan1.TabIndex = 0;
             this.lblScan1.Text = "lblScan1";
             this.lblScan1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,7 +208,7 @@
             // compareControl
             // 
             this.compareControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.compareControl.ImagesTextSplitterDistance = 250;
+            this.compareControl.ImagesTextSplitterDistance = 227;
             this.compareControl.Location = new System.Drawing.Point(150, 35);
             this.compareControl.Name = "compareControl";
             this.compareControl.Size = new System.Drawing.Size(789, 510);
