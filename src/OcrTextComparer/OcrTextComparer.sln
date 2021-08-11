@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1209
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcrTextComparer", "OcrTextComparer\OcrTextComparer.csproj", "{CA56F220-088F-4644-B86C-1C80893E7E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ismaroik.ImageCompare", "Ismaroik.ImageCompare\Ismaroik.ImageCompare.csproj", "{6132563E-540F-444B-9CD6-398909DBF347}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCompare", "ImageCompare\ImageCompare.csproj", "{6132563E-540F-444B-9CD6-398909DBF347}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

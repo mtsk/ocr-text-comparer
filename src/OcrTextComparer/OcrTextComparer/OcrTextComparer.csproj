@@ -94,13 +94,13 @@
     <None Include="tessdata\eng.traineddata" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ismaroik.ImageCompare\Ismaroik.ImageCompare.csproj">
-      <Project>{6132563e-540f-444b-9cd6-398909dbf347}</Project>
-      <Name>Ismaroik.ImageCompare</Name>
-    </ProjectReference>
+    <None Include="tessdata\_info.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="tessdata\_info.txt" />
+    <ProjectReference Include="..\ImageCompare\ImageCompare.csproj">
+      <Project>{6132563e-540f-444b-9cd6-398909dbf347}</Project>
+      <Name>ImageCompare</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,7 +43,7 @@
             this.btnLoadScan2 = new System.Windows.Forms.Button();
             this.btnLoadScan1 = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.compareControl = new Ismaroik.ImageCompare.WinForms.ImageCompareControl();
+            this.compareControl = new ImageCompare.WinForms.ImageCompareControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -251,7 +251,7 @@
         private System.Windows.Forms.Button btnLoadScan2;
         private System.Windows.Forms.Button btnLoadScan1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private Ismaroik.ImageCompare.WinForms.ImageCompareControl compareControl;
+        private ImageCompare.WinForms.ImageCompareControl compareControl;
     }
 }
 
