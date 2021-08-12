@@ -9,7 +9,7 @@ Imges are preprocessed and texts are extracted from both images using Tesseract 
 Quality of results is highly dependent on quality of ocr, for best results use:
  - images with at least 400 DPI (600 DPI and more is optimal)
  - perform comparison selecting appropriate language
-   - to keep size of project in check only 'English' language is included, to extend add tesseract *traineddata* to src/OcrTextComparer/OcrTextComparer/tessdata/
+   - to keep size of project in check only 'English' language is included, to extend add tesseract **.traineddata* to src/OcrTextComparer/OcrTextComparer/tessdata/
 
 ## Code organization
 Solution contains two projects - *ImageCompare* and *OcrTextComparer*. *ImageCompare* project contains everything related to comparison, including compare control - *ImageCompareControl*. *OcrTextComparer* project basically acts as a host for compare control, it contains components required to provide inputs for compare control.
