@@ -9,7 +9,7 @@ Texts are extracted from both images using Tesseract ocr engine. These texts are
 Quality of results is highly dependent on quality of ocr. For best results use images with at least 400 DPI (600 DPI and more is optimal).
 
 ## Code organization
-
+Solution contains two projects - *ImageCompare* and *OcrTextComparer*. *ImageCompare* project contains everything related to comparison, including compare control - *ImageCompareControl*. *OcrTextComparer* project basically acts as a host for compare control, it contains components required to provide inputs for compare control.
 
 ## Dependencies
  - .NET Framework 4
